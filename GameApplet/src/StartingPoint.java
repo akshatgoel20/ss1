@@ -19,7 +19,7 @@ int y= 0 ;
 		setSize(500,500);
 
 	}
-
+//hello
 	@Override
 	public void start() {
 		// TODO Auto-generated method stub
