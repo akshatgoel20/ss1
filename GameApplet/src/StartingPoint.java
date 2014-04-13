@@ -30,8 +30,25 @@ int y= 0 ;
 	}
 	public void run() {
 		while(true){
-			x += dx ;
-			y += dy ;
+			//add detecting wall collisons
+			if(x+dx > this.getWidth()-radius-1){
+				x = this.getWidth()-radius-1 ;
+				dx = -dx ;
+			}else if(x + dx <0 +radius){
+				x = 0 + radius ;
+				dx = -dx ;
+			}else{
+				x += dx ;
+			}
+			if(y + dy > this.getHeight()-radius-1 ){
+				y = this.getHeight()-radius-1 ;
+				dy = -dy ;
+			}else if(y+dy <0+radius){
+				y = 0 + radius ;
+				dy = - dy ;
+			}else{
+				y+=dy ;
+			}
 			repaint();
 			try {
 				Thread.sleep(17);
